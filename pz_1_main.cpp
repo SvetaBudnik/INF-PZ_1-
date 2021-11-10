@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
+#include<iomanip>
 
 union U32 {
 	float FLOAT;
@@ -70,7 +71,7 @@ int main() {
 			uint32_t hex_inp;
 			std::cout << "Enter float hexadecimal representation" << std::endl;
 			if (std::cin >> std::hex >> hex_inp)
-				std::cout <<std::scientific<< str_to_float_u(hex_inp) << std::endl;
+				std::cout << std::scientific << str_to_float_u(hex_inp) << std::endl;
 			else
 				std::cout << "Wrong input" << std::endl;
 			break;
@@ -94,7 +95,7 @@ int main() {
 			uint64_t hex_inp;
 			std::cout << "Enter double hexadecimal representation" << std::endl;
 			if (std::cin >> std::hex >> hex_inp)
-				std::cout << std::scientific << str_to_double_u(hex_inp) << std::endl;
+				std::cout << std::setprecision(std::numeric_limits<long double>::digits10 + 1) << std::scientific << str_to_double_u(hex_inp) << std::endl;
 			else
 				std::cout << "Wrong input" << std::endl;
 			break;
