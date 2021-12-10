@@ -59,7 +59,7 @@ namespace unittests
       TEST_METHOD(asm_HexToFloat_neg_NaN_min) { Assert::IsTrue(isnan(FloatConverter::uint_to_float(innanmin))); }
 
 
-      // test double
+      // test  double
       TEST_METHOD(asm_HexToDouble_pos_NaN_max) { Assert::IsTrue(isnan(FloatConverter::uint_to_double(lpnanmax))); }
       TEST_METHOD(asm_HexToDouble_pos_NaN_min) { Assert::IsTrue(isnan(FloatConverter::uint_to_double(lpnanmin))); }
       TEST_METHOD(asm_HexToDouble_positive_inf) { Assert::AreEqual(FloatConverter::uint_to_double(lpinfi), dpinfi); }
